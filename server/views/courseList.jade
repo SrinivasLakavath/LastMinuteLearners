@@ -27,7 +27,7 @@ html
             h3.card-title= course.title
             p.card-provider Provided by: #{course.provider}
           .card-body
-            p.card-description= course.description
+            p.card-duration= course.duration
             p.card-rating Rating: #{course.rating} ★
             a.btn.btn-primary(href=`/courses/${course._id}`) View Course
           
