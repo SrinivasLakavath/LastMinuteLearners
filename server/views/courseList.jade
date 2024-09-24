@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title Course List - Course Recommendation System
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  body
+    .navbar.navbar-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Course Recommendation System
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+          li.nav-item
+            a.nav-link(href='/reviews') Reviews
+
+    .banner
+      h1 Available Courses
+      p Browse our list of courses to enhance your skills.
+
+    .course-container
+      each course in courses
+        .course-card
+          .card-header
+            h3.card-title= course.title
+            p.card-provider Provided by: #{course.provider}
+          .card-body
+            p.card-description= course.description
+            p.card-rating Rating: #{course.rating} ★
+            a.btn.btn-primary(href=`/courses/${course._id}`) View Course
+          
+    footer
+      p &copy; 2024 Course Recommendation System

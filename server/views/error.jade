@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title Error
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  body
+    .navbar.navbar-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Course Recommendation System
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+          li.nav-item
+            a.nav-link(href='/reviews') Reviews
+    .container
+      h1= message
+      h2= error.status
+      pre #{error.stack}
+      
+    footer
+      p &copy; 2024 Course Recommendation System

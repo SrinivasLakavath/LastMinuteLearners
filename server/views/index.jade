@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Welcome to the Course Recommendation System
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  body
+    .navbar.navbar-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Course Recommendation System
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+          li.nav-item
+            a.nav-link(href='/reviews') Reviews
+
+    .banner
+      .banner-content
+        h1 Welcome to the Course Recommendation System
+        p Your one-stop solution to explore, review, and excel with the best courses online!
+
+    .section
+      .cta-container
+        .cta-box
+          h2 Browse Our Courses
+          p Discover courses from a variety of providers, complete with user reviews and ratings to guide you.
+          a.btn.btn-primary(href='/courses') Start Exploring
+
+        .cta-box
+          h2 Share Your Experience
+          p Help others by leaving reviews for the courses you've completed and see what other learners have to say.
+          a.btn.btn-primary(href='/reviews') View Reviews
+
+    footer
+      p &copy; 2024 Course Recommendation System

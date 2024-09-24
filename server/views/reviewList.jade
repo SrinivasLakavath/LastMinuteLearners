@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    .navbar.navbar-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Course Recommendation System
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+          li.nav-item
+            a.nav-link(href='/reviews') Reviews
+
+    title All Reviews - Course Recommendation System
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  body
+    .container
+      h1.reviews-title All Reviews
+      each review in reviews
+        .review-card
+          h3.review-author= review.author
+          p.review-text= review.reviewText
+          p.review-rating Rating: #{review.rating} ★
+
+    footer.footer
+      p.footer-text &copy; 2024 Course Recommendation System

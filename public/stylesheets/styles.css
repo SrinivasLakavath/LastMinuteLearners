@@ -1,0 +1,271 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #EEF0F2; /* Light background for contrast */
+  color: #3D315B; /* Dark text color for readability */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure footer is at the bottom */
+}
+
+h1, h2, h3, h4 {
+  color: #444B6E; /* Medium blue for headings */
+}
+
+a {
+  color: #3D315B; /* Link color matching the dark text */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #3D315B; /* Dark background for navbar */
+  padding: 10px 20px; /* Padding for navbar */
+}
+
+
+.navbar .navbar-brand {
+  color: #EEF0F2; /* Light color for navbar brand */
+  font-size: 24px;
+  margin-right: auto; /* Pushes the brand to the left */
+}
+
+.navbar-header {
+  flex-direction: column;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Space between nav items */
+}
+
+
+.nav-link {
+  color: #EEF0F2; /* Light color for nav links */
+  font-weight: bold;
+}
+
+/* Banner Styles */
+.banner {
+  background-color: #EEF0F2;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 2em;
+  color: #3D315B;
+}
+
+.banner p {
+  font-size: 1.2em;
+  color: #444B6E;
+  margin-top: 10px;
+}
+/* Section Styles */
+.section {
+  padding: 40px 20px;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between; /* Space between the two cards */
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+}
+
+.cta-box {
+  background-color: #FFF; /* White background for CTAs */
+  border: 1px solid #444B6E; /* Border to define the box */
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: calc(50% - 20px); /* Responsive width for two side-by-side cards */
+  margin: 8px; /* Margin between cards */
+  flex: 1; /* Ensure it takes equal space */
+}
+.cta-box:hover {
+  transform: scale(1.02); /* Scale effect on hover */
+}
+
+/* Course Card Styles */
+/* Course List Styles */
+.course-container {
+  display: grid; /* Use grid layout for courses */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Course Card Styles */
+.course-card {
+  background-color: #FFF;
+  border: 1px solid #444B6E;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.course-card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+.card-header { 
+  background-color: #444B6E;
+  color: #EEF0F2;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.course-container .course-card .card-header .card-title {
+  color: #ffffff; 
+}
+
+
+.card-provider {
+  font-size: 14px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-description {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.card-rating {
+  font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #3D315B; /* Dark footer */
+  color: #EEF0F2; /* Light text color */
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-text {
+  margin: 0;
+}
+/* Additional Styles for Course Details Page */
+
+/* Course Detail Header */
+.course-detail-header {
+  background-color: #3D315B; /* Dark background for course detail header */
+  color: #EEF0F2; /* Light text color */
+  padding: 20px; /* Padding for the header */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below header */
+}
+
+/* Course Info Section */
+.course-info {
+  background-color: #FFF; /* White background for course info */
+  padding: 20px; /* Padding for the info section */
+  border: 1px solid #444B6E; /* Border to define the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px; /* Space below course info */
+}
+
+/* Course Link Button */
+.course-link {
+  background-color: #FF0000; /* Red background for course link */
+  color: #FFF; /* White text */
+  padding: 10px 20px; /* Padding for button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Inline block for centering */
+  margin-top: 15px; /* Space above button */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.course-link:hover {
+  background-color: #C40000; /* Darker red on hover */
+}
+
+/* Review Section Styles */
+.review-section {
+  margin-top: 30px; /* Space above reviews */
+}
+
+.review-header {
+  font-weight: bold; /* Bold for review header */
+  font-size: 1.5em; /* Larger font for header */
+  margin-bottom: 15px; /* Space below header */
+}
+
+.review-card {
+  background-color: #EEF0F2; /* Light background for review card */
+  border: 1px solid #444B6E; /* Border for review card */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Padding inside review card */
+  margin-bottom: 10px; /* Space below each review */
+}
+
+/* Video Box Styles */
+.video-box {
+  position: relative; /* Create a positioning context for the overlay */
+}
+
+.video-thumbnail img {
+  width: 100%; /* Ensure the image takes the full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.video-overlay {
+  position: absolute; /* Position overlay on top of the image */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset for centering */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px; /* Padding for the overlay */
+  border-radius: 5px; /* Rounded corners for the overlay */
+  display: flex; /* Flex to center text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+
+.video-thumbnail:hover .video-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* Review Text */
+.review-text {
+  font-size: 14px; /* Font size for review text */
+  color: #444B6E; /* Medium blue for text */
+  margin-top: 5px; /* Space above review text */
+}
+
+/* Review Rating */
+.review-rating {
+  color: #FFB74D; /* Color for rating */
+  font-weight: bold; /* Bold for rating */
+}

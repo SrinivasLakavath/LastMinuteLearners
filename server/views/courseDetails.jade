@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= course.title
+    link(rel='stylesheet', href="/stylesheets/styles.css")
+  body
+    .navbar.navbar-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Course Recommendation System
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+          li.nav-item
+            a.nav-link(href='/reviews') Reviews
+
+    .container
+      .course-details-box
+        .course-info
+          h1.course-title= course.title
+          p.course-provider Provider: #{course.provider}
+          p.course-description= course.description
+          .course-details
+            p.course-duration Duration: #{course.duration}
+            p.course-rating Rating: #{course.rating} ★
+
+        .video-box
+          .video-thumbnail
+            a(href=course.link, target='_blank')
+              img.img-fuild.rounded(src=course.linkimg, alt='Course Video Thumbnail')
+              //- .video-overlay Watch Video ▶
+
+      .reviews-section
+        h3 Reviews
+        if course.reviews.length
+          each review in course.reviews
+            .review
+              h4.review-author= review.author
+              p.review-text= review.reviewText
+              p.review-rating Rating: #{review.rating} ★
+              p.review-date Date: #{review.timestamp.toDateString()} // format date for clarity
+        else
+          p No reviews yet. Be the first to leave a review!
+
+        .add-review-form
+          h3 Add a Review
+          form(action=`/courses/${course._id}/reviews`, method='POST')
+            .form-group
+              label(for='author') Author
+              input#author(type='text', name='author', required)
+            .form-group
+              label(for='rating') Rating
+              input#rating(type='number', name='rating', min='1', max='5', required)
+            .form-group
+              label(for='reviewText') Review
+              textarea#reviewText(name='reviewText', required)
+            button.btn-submit(type='submit') Submit Review
+
+    footer
+      p &copy; 2024 Course Recommendation System
