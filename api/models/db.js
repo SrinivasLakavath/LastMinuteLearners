@@ -14,3 +14,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   });
 
 module.exports = mongoose;
+
+
+
+// echo "# LMS" >> README.md
+// git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin https://github.com/SrinivasLakavath/LMS.git
+// git push -u origin main
