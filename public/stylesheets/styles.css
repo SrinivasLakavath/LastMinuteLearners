@@ -1,0 +1,400 @@
+/* Import the required fonts */
+@import url('https://fonts.googleapis.com/css2?family=Euclid+Circular+A:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskerville:wght@400;500;700&display=swap');
+/* Base Styles */
+body {
+  font-family: 'MongoDB Value Serif','Euclid Circular A', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #EEF0F2; /* Light background for contrast */
+  color: #3D315B; /* Dark text color for readability */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure footer is at the bottom */
+}
+
+h1, h2, h3, h4 {
+  font-family: 'MongoDB Value Serif', 'Euclid Circular A', sans-serif;
+  color: #444B6E; /* Medium blue for headings */
+}
+
+a {
+  color: #3D315B; /* Link color matching the dark text */
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #3D315B; /* Dark background for navbar */
+  padding: 10px 20px; /* Padding for navbar */
+}
+.navbar .navbar-brand {
+  color: #EEF0F2; /* Light color for navbar brand */
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px; /* Space between nav items */
+}
+.nav-link {
+  color: #EEF0F2; /* Light color for nav links */
+  font-weight: bold;
+}
+
+/* Banner Styles */
+.banner {
+  background-color: #EEF0F2;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 2em;
+  color: #3D315B;
+}
+
+.banner p {
+  font-size: 1.2em;
+  color: #444B6E;
+  margin-top: 10px;
+}
+/* Section Styles */
+.section {
+  padding: 40px 20px;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: space-between; /* Space between the two cards */
+  flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
+}
+
+.cta-box {
+  background-color: #FFF; /* White background for CTAs */
+  border: 1px solid #444B6E; /* Border to define the box */
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: calc(50% - 20px); /* Responsive width for two side-by-side cards */
+  margin: 8px; /* Margin between cards */
+}
+
+.cta-box:hover {
+  transform: scale(1.02); /* Scale effect on hover */
+}
+
+/* Course List Styles */
+.course-container {
+  display: grid; /* Use grid layout for courses */
+  grid-template-columns: repeat(4, 1fr); /* Four columns for course cards */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+/* Course Card Styles */
+.course-card {
+  background-color: #E0F2F1;
+  border: 1px solid #444B6E;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.course-card:hover {
+  transform: scale(1.02); /* Scale effect on hover */
+}
+
+.card-header {
+  background-color: #444B6E;
+  color: #EEF0F2;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+.card-provider {
+  font-size: 14px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-description {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.card-rating {
+  font-weight: bold;
+}
+
+/* Star Styles */
+.star {
+  color: gold; /* Set star color to gold */
+  font-size: 1.5em; /* Adjust size as needed */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #3D315B; /* Dark footer */
+  color: #EEF0F2; /* Light text color */
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-text {
+  margin: 0;
+}
+
+/* Additional Styles for Course Details Page */
+
+/* Course Detail Header */
+.course-detail-header {
+  background-color: #3D315B; /* Dark background for course detail header */
+  color: #EEF0F2; /* Light text color */
+  padding: 20px; /* Padding for the header */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below header */
+}
+
+/* Course Info Section */
+.course-info {
+  background-color: #FFF; /* White background for course info */
+  padding: 20px; /* Padding for the info section */
+  border: 1px solid #444B6E; /* Border to define the section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px; /* Space below course info */
+}
+
+/* Video Thumbnail Styles */
+.video-thumbnail {
+  display: flex; /* Enable flexbox for alignment */
+  align-items: flex-start; /* Align image to the top */
+  margin-right: 10px; /* Space between course info and image */
+  margin-left: 2px;
+}
+
+.video-thumbnail img {
+  width: 200px; /* Set a smaller width for the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners for the image */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow to the image */
+}
+
+/* Review Section Styles */
+.reviews-section {
+  margin: 20px 0;
+}
+
+.review-banner {
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px; /* Space between reviews */
+  background-color: #f9f9f9; /* Light background for the review cards */
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between; /* Align author and date */
+  align-items: center; /* Vertically center items */
+}
+
+.review-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review-date {
+  font-size: 14px; /* Smaller font for date */
+  color: #666; /* Gray color for date */
+}
+
+.review-text {
+  margin: 10px 0; /* Space between text and rating */
+  font-size: 16px;
+  color: #333; /* Darker text for better readability */
+}
+
+.review-rating {
+  font-size: 15px;
+  color: #000000; /* Gold color for stars */
+}
+
+.review-rating span {
+  color: gold; /* Color for filled stars */
+  font-size: 20px; /* Adjust the size as needed */
+  text-shadow: 1px 1px 1px black; /* Adds a shadow effect to the stars */
+  margin-right: 2px; /* Space between stars */
+}
+/* Add Review Form Styles */
+.add-review-form {
+  margin-top: 20px;
+}
+
+.add-review-form .form-group {
+  margin-bottom: 10px;
+}
+
+.btn-submit {
+  background-color: #221bae; /* Blue background for submit button */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #19106f; /* Darker blue on hover */
+}
+
+/* Payment Status Styles */
+.course-payment-status {
+  display: inline-block;
+  background-color: #FFEBEE;
+  font-weight: bold;
+  color: black;
+  padding: 3px 5px;
+  border-radius: 4px;
+  font-size: 0.6em;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.card-title {
+  color: #FFFFFF; /* Set the text color to white */
+}
+.cta-section .cta-box {
+  background-color: #FFF;
+  border: 1px solid #444B6E;
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(90%); /* Default width is 100% minus 10px to ensure it fits well */
+  margin: 8px auto; /* Center the box with margin */
+  transition: width 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+/* General button styles */
+a.btn.btn-primary {
+  background-color: #221bae; /* Blue background for primary buttons */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding for the buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  display: inline-block; /* Ensure buttons behave like inline elements */
+  text-align: center; /* Center-align text */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for buttons */
+a.btn.btn-primary:hover {
+  background-color: #19106f; /* Darker blue on hover */
+  transform: scale(1.02); /* Slight scale effect on hover */
+}
+/* Logo Section Styling */
+.logo-section {
+  text-align: center; /* Center all content */
+  padding: 40px 0; /* Add padding at the top and bottom */
+  background-color: #EEF0F2; /* Light background for contrast */
+}
+
+.logo-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align all elements */
+}
+
+img.logo {
+  width: 60%; /* Make the logo 60% of the container width */
+  max-width: 650px; /* Optional max-width for smaller screens */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space between logo and title */
+}
+
+h1.logo-title {
+  font-family: 'Euclid Circular A', sans-serif; /* Use the MongoDB font */
+  color: #3D315B; /* Darker color for title */
+  font-size: 2.5em; /* Large font size for the title */
+  margin: 10px 0; /* Add margin around the title */
+}
+
+p.logo-description {
+  font-family: 'Euclid Circular A', sans-serif; /* Font matching the rest of the content */
+  color: #444B6E; /* Secondary dark color for the description */
+  font-size: 1.2em; /* Slightly larger text */
+  max-width: 600px; /* Limit the width of the description */
+  margin-top: 10px; /* Space between title and description */
+  line-height: 1.5; /* Better readability */
+}
+/* Helpful Section Styling */
+.helpful-section {
+  background-color: #EDE7F6; /* Light background for the section */
+  padding: 50px 0; /* Add spacing on top and bottom */
+  text-align: center; /* Center the text */
+}
+
+.helpful-section .container {
+  max-width: 800px; /* Limit the width of the container */
+  margin: 0 auto; /* Center the container */
+}
+
+h2.helpful-title {
+  font-family: 'Euclid Circular A', sans-serif; /* Font similar to MongoDB */
+  color: #2c3e50; /* Dark color for the title */
+  font-size: 2.2em; /* Larger font size for the title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+p.helpful-benefits {
+  font-family: 'Euclid Circular A', sans-serif; /* Keep consistent font */
+  color: #444B6E; /* Dark gray for description */
+  font-size: 1.2em; /* Slightly larger text for benefits description */
+  margin-bottom: 15px; /* Space below the benefits description */
+}
+
+ul.helpful-list {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+li.helpful-list-item {
+  font-family: 'Euclid Circular A', sans-serif; /* Keep consistent font */
+  color: #444B6E; /* Dark gray for list items */
+  font-size: 1.1em; /* Normal font size for list items */
+  padding: 10px 0; /* Add padding between list items */
+  border-bottom: 1px solid #ddd; /* Light border between items */
+}
+
+li.helpful-list-item:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+p.helpful-summary {
+  font-family: 'Euclid Circular A', sans-serif; /* Keep consistent font */
+  color: #555; /* Medium gray for the summary */
+  font-size: 1.2em; /* Slightly larger font for summary */
+  margin-top: 20px; /* Space above the summary */
+  line-height: 1.5; /* Improve readability */
+}

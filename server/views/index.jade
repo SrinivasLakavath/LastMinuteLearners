@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    title Welcome to LML: Last Minute Learners
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  body
+    .navbar.navbar-light.bg-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Home
+
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+    .logo-section
+      .container
+        img.logo(src='/images/logo.png', alt='LML Logo') // Adjust the path to your logo image
+        h1.logo-title Welcome to LML: Last Minute Learners
+        p.logo-description.lead At LML, we help learners of all levels find the perfect course to meet their educational goals. Whether you're looking for professional development, skill mastery, or personal growth, our platform connects you with top-rated courses from a variety of providers. 
+
+    .helpful-section
+      .container
+        h2.helpful-title Why Choose LML?
+        p.helpful-benefits With LML, you'll:
+        ul.helpful-list
+          li.helpful-list-item Gain access to curated courses from leading platforms, ensuring quality and relevance.
+          li.helpful-list-item Explore honest reviews and ratings from real users to help make informed decisions.
+          li.helpful-list-item Customize your learning journey with flexible, self-paced courses that fit your schedule.
+        p.helpful-summary No more wasting time searching! LML is your one-stop destination for finding the right course to take you to the next level in your learning journey.
+
+    .cta-section
+      .cta-container
+        .cta-box
+          h2.cta-title Take the First Step Today
+          p.cta-text Ready to begin your learning journey? Start exploring our course selection and discover the right path for you.
+          a.btn.btn-primary.cta-btn(href='/courses') Start Exploring
+
+    footer
+      p.footer-text &copy; 2024 Last Minute Learners

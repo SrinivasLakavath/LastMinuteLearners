@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Error
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  body
+    .navbar.navbar-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Home
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+    .container
+      h1= message
+      h2= error.status
+      pre #{error.stack}
+      
+    footer
+      p.footer-text &copy; 2024 Last Minute Learners

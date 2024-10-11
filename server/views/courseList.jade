@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title Course List - Course Recommendation System
+    link(rel="stylesheet", href="/stylesheets/styles.css")
+  body
+    .navbar.navbar-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Home
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+    .banner
+      h1.banner-title Available Courses
+      p.banner-description Browse our list of courses to enhance your skills.
+
+    .course-container
+      each course in courses
+        .course-card.card
+          .card-header
+            h1.card-title
+            = course.title
+            span.course-payment-status #{course.paymentStatus}
+            p.card-provider Provided by: #{course.provider}
+          .card-body
+            p.card-rating Rating: #{course.rating} ★
+            p.course-duration Duration: #{course.duration}
+            p.course-level Level: #{course.level}
+            a.btn.btn-primary.card-btn(href=`/courses/${course._id}`) View Course
+          
+    footer
+      p.footer-text &copy; 2024 Last Minute Learners

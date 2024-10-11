@@ -1,0 +1,85 @@
+doctype html 
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= course.title
+    link(rel='stylesheet', href="/stylesheets/styles.css")
+  body
+    .navbar.navbar-light
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') Home
+        .navbar-nav
+          li.nav-item
+            a.nav-link(href='/courses') Courses
+          li.nav-item
+            a.nav-link(href='/about') About Us
+
+    .container
+      .course-details-container(style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px;")
+        .course-info(style="flex: 1;")
+          h1.course-title 
+            = course.title
+            span.course-payment-status #{course.paymentStatus}
+          p.course-provider Provider: #{course.provider}
+          p.course-level Level: #{course.level}
+          p.course-prerequisites Prerequisites: #{course.prerequisites || 'None'}
+          p.course-description= course.description
+          
+          .course-details
+            p.course-duration Duration: #{course.duration}
+            p.course-rating Rating: #{course.rating} ★
+
+            if course.syllabus && course.syllabus.length > 0
+              .course-syllabus
+                h3 Syllabus
+                ul
+                  each topic in course.syllabus
+                    li= topic
+            else
+              p No syllabus provided.
+
+        .video-box(style="flex: 0 0 500px; margin-left: 20px; display: flex; justify-content: flex-end; align-items: flex-start;")
+          .video-thumbnail
+            // Use iframe to embed the video directly
+            if course.linkimg
+              a(href=course.link, target="_blank")
+                img(src=course.linkimg, alt='Course Image', style="width: 500px; height: auto;")
+            else
+              iframe(src=course.link.replace("watch?v=", "embed/"), frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen, width="500", height="auto", alt='Course Video')
+              p Your browser does not support embedded videos.
+
+      .reviews-section
+        h2 Reviews
+        if course.reviews.length > 0
+          each review in course.reviews
+            .review-banner
+              .review-header
+                h4.review-author= review.author
+                p.review-date(style='float: right;') Date: #{review.timestamp.toDateString()}
+              p.review-text= review.reviewText
+              p.review-rating Rating: 
+                each star in [1, 2, 3, 4, 5]
+                  if star <= review.rating
+                    span ★
+                  else
+                    span ☆
+        else
+          p No reviews yet. Be the first to leave a review!
+
+        .add-review-form
+          h3 Add a Review
+          form(action=`/courses/${course._id}/reviews`, method="POST")
+            .form-group
+              label(for='author') Author
+              input#author(type='text', name='author', required)
+            .form-group
+              label(for='rating') Rating
+              input#rating(type='number', name='rating',min='1', max='5', required)
+            .form-group
+              label(for='reviewText') Review
+              textarea#reviewText(name='reviewText', required)
+            button.btn-submit(type='submit') Submit Review
+
+    footer
+      p.footer-text &copy; 2024 Last Minute Learners
