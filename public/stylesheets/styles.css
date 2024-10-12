@@ -398,3 +398,48 @@ p.helpful-summary {
   margin-top: 20px; /* Space above the summary */
   line-height: 1.5; /* Improve readability */
 }
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  /* CTA Boxes */
+  .cta-box {
+    width: 100%; /* Full width on mobile */
+  }
+
+  /* Course List */
+  .course-container {
+    grid-template-columns: 1fr; /* Single column for courses on mobile */
+  }
+
+
+  /* Course List */
+  .course-details-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  /* Full width for course info */
+  .course-info {
+    flex: none; /* Remove flex-grow */
+    width: 100%; /* Take full width on mobile */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  /* Video Box Styling */
+  .video-box {
+    flex: none; /* Remove fixed size */
+    width: 100%; /* Take full width on mobile */
+    margin-left: 0; /* Remove left margin */
+    margin-top: 20px; /* Add space between course-info and video box */
+    display: flex;
+    justify-content: center; /* Center video on mobile */
+    align-items: flex-start;
+  }
+
+  .video-thumbnail {
+    width: 100%; /* Ensure the video thumbnail is full width on mobile */
+  }
+}
+
